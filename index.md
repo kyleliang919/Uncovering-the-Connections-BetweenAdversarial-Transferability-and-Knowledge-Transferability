@@ -17,6 +17,12 @@ Intuitive low dimensional visualization of Adversarial Transferability:
 
 ## Experiment results
 ### Adversarial Transferability Indicates Knowledge-transfer among Data Distributions
+We manually construct five source datasets (5 source models) based on CIFAR-10 and
+a single target dataset (1 reference model) based on STL-10. We divide the classes of the original
+datasets into two categories, animals (bird, cat, deer, dog) and transportation vehicles (airplane,
+automobile, ship, truck). Each of the source datasets consists of different a percentage of animals and
+transportation vehicles, while the target dataset contains only transportation vehicles, which is meant
+to control the closeness of the two data distributions.
 ![GitHub Logo](/demos/fig3.png)
 ### Adversarial Transferability Indicating Knowledge-transfer among Attributes
 ![GitHub Logo](/demos/fig4.png)
