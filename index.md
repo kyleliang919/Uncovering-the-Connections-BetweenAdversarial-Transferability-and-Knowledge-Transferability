@@ -6,3 +6,4 @@ Despite the immense success that deep neural networks (DNNs) have achieved, adve
 
 ## Theoretical Results
 ![GitHub Logo](/demos/notation.png)
+![GitHub Logo](/demos/setting.png)
