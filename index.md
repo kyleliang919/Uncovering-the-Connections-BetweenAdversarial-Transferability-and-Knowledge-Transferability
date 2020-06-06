@@ -37,7 +37,7 @@ whether source models of source attributes, can transfer to perform facial recog
 ![GitHub Logo](/demos/fig4.png)
 ### Adversarial Transferability Indicating Knowledge-transfer among Tasks
 In this experiment, we aim to show that adversarial transferability can also indicate the knolwdge
-transferability among different machine learning tasks. Zamir et al. [82] shows that models trained
+transferability among different machine learning tasks. Zamir et al. shows that models trained
 on different tasks can transfer to other tasks well, especially when the tasks belong to the same
 “category". Here we leverage the same dataset, and pick 15 single image tasks from the task pool,
 including Autoencoding, 2D Segmentation, 3D Keypoint and etc. Intuitively, these tasks can be
