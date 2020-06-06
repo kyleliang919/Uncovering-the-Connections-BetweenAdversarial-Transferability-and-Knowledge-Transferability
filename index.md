@@ -4,7 +4,7 @@ Despite the immense success that deep neural networks (DNNs) have achieved, adve
 
 ![GitHub Logo](/demos/fig1.png)
 
-## Theoretical results
+## Theory
 
 > **Intuitive low dimensional visualization of Adversarial Transferability:** 
 ![GitHub Logo](/demos/fig2.png)
@@ -29,7 +29,7 @@ Despite the immense success that deep neural networks (DNNs) have achieved, adve
 
 >![GitHub Logo](/demos/pgd.png)
 
-## Experiment results
+## Experiment
 
 ### Adversarial Transferability Indicates Knowledge-transfer among Data Distributions
 We manually construct five source datasets (5 source models) based on CIFAR-10 and
