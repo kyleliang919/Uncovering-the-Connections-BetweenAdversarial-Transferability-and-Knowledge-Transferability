@@ -4,7 +4,7 @@ Despite the immense success that deep neural networks (DNNs) have achieved, adve
 
 ![GitHub Logo](/demos/fig1.png)
 ## Theoretical Results
-![GitHub Logo](/demos/fig2.png)
+Intuitive low dimensional visualization of adversarial transferability: ![GitHub Logo](/demos/fig2.png)
 ![GitHub Logo](/demos/notation.png)
 ![GitHub Logo](/demos/setting.png)
 ![GitHub Logo](/demos/problem.png)
