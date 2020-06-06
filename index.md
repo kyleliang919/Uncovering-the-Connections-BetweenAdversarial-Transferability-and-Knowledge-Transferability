@@ -36,5 +36,13 @@ CelebA consists of 202,599 face images from 10,177 identities. A reference facia
 whether source models of source attributes, can transfer to perform facial recognition. Below we show the top-5 attributes that have the highest adversarial transferability.
 ![GitHub Logo](/demos/fig4.png)
 ### Adversarial Transferability Indicating Knowledge-transfer among Tasks
+In this experiment, we aim to show that adversarial transferability can also indicate the knolwdge
+transferability among different machine learning tasks. Zamir et al. [82] shows that models trained
+on different tasks can transfer to other tasks well, especially when the tasks belong to the same
+“category". Here we leverage the same dataset, and pick 15 single image tasks from the task pool,
+including Autoencoding, 2D Segmentation, 3D Keypoint and etc. Intuitively, these tasks can be
+categorized into 3 categories, semantic task, 2D tasks as well as 3D tasks. Leveraging the tasks within
+the same category, which would hypothetically have higher adversarial transferability, we evaluate
+the corresponding knowledge transferability.
 ![GitHub Logo](/demos/fig5.png)
 
