@@ -27,14 +27,14 @@ datasets into two categories, animals (bird, cat, deer, dog) and transportation 
 automobile, ship, truck). Each of the source datasets consists of different a percentage of animals and
 transportation vehicles, while the target dataset contains only transportation vehicles, which is meant
 to control the closeness of the two data distributions.
-![GitHub Logo](/demos/fig3.png)
+>![GitHub Logo](/demos/fig3.png)
 ### Adversarial Transferability Indicating Knowledge-transfer among Attributes
 In addition to the data distributions, we validate our theory on another dimension, attributes. This experi-
 ment suggests that the more adversarially transferable the source model of certain attributes is to the reference
 model, the better the model performs on the target task aiming to learn tar- get attributes.
 CelebA consists of 202,599 face images from 10,177 identities. A reference facial recognition model is trained on this identities. Each image also comes with 40 binary attributes, on which we train 40 source models. Our goal is to test
 whether source models of source attributes, can transfer to perform facial recognition. Below we show the top-5 attributes that have the highest adversarial transferability.
-![GitHub Logo](/demos/fig4.png)
+>![GitHub Logo](/demos/fig4.png)
 ### Adversarial Transferability Indicating Knowledge-transfer among Tasks
 In this experiment, we aim to show that adversarial transferability can also indicate the knolwdge
 transferability among different machine learning tasks. Zamir et al. shows that models trained
@@ -44,5 +44,5 @@ including Autoencoding, 2D Segmentation, 3D Keypoint and etc. Intuitively, these
 categorized into 3 categories, semantic task, 2D tasks as well as 3D tasks. Leveraging the tasks within
 the same category, which would hypothetically have higher adversarial transferability, we evaluate
 the corresponding knowledge transferability.
-![GitHub Logo](/demos/fig5.png)
+>![GitHub Logo](/demos/fig5.png)
 
