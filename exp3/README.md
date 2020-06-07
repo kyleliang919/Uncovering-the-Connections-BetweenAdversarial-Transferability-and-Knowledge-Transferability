@@ -47,4 +47,4 @@ python3 visualize.py
 ![exp3](fig6.png)
 
 ## Acknowledgement
-This code is adapted from [public repo](https://github.com/StanfordVL/taskonomy)
+This code is adapted upon [Taskonomy](https://github.com/StanfordVL/taskonomy).
