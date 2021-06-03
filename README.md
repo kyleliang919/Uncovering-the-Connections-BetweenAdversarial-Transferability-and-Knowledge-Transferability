@@ -1,4 +1,4 @@
-# Does Adversarial Transferability Indicate Knowledge Transferability?
+# Uncovering the Connections BetweenAdversarial Transferability and Knowledge Transferability
 
 This repository is the official implementation of [Uncovering the Connections BetweenAdversarial Transferability and Knowledge Transferability](https://arxiv.org/abs/2006.14512)
 
