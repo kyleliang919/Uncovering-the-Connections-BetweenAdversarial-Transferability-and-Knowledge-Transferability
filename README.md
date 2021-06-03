@@ -4,6 +4,5 @@ This repository is the official implementation of [Uncovering the Connections Be
 
 Detailed instructions can be found in experiment folders.
 ![overview](fig1.png)
-![overview](fig2.pdf)
 ## License
 The MIT License (MIT)
