@@ -1,37 +1,26 @@
 ## Intro
 
-Despite the immense success that deep neural networks (DNNs) have achieved, adversarial examples, which are perturbed inputs that aim to mislead DNNs to make mistakes, have recently led to great concern. On the other hand, adversarial examples exhibit interesting phenomena, such as adversarial transferability. DNNs also exhibit knowledge transfer, which is critical to improving learning efficiency and learning in domains that lack high-quality training data. In this paper, we aim to turn the existence and pervasiveness of adversarial examples into an advantage. Given that adversarial transferability is easy to measure while it can be challenging to estimate the effectiveness of knowledge transfer, does adversarial transferability indicate knowledge transferability? We first theoretically analyze the relationship between adversarial transferability and knowledge transferability and outline easily checkable sufficient conditions that identify when adversarial transferability indicates knowledge transferability. In particular, we show that composition with an affine function is sufficient to reduce the difference between two models when adversarial transferability between them is high. We provide empirical evaluation for different transfer learning scenarios on diverse datasets, including CIFAR-10, STL-10, CelebA, and Taskonomy-data -- showing a strong positive correlation between the adversarial transferability and knowledge transferability, thus illustrating that our theoretical insights are predictive of practice.
+Knowledge transferability, or transfer learning, has been widely adopted to allow a pre-trained model in the source domain to be effectively adapted to downstream tasks in the target domain. It is thus important to explore and understand the factors affecting knowledge transferability. In this paper, as the first work, we analyze and demonstrate the connections between knowledge transferability and another important phenomenon adversarial transferability, i.e., adversarial examples generated against one model can be transferred to attack other models. Our theoretical studies show that adversarial transferability indicates knowledge transferability, and vice versa. Moreover, based on the theoretical
+insights, we propose two practical adversarial transferability metrics to characterize this process, serving as bidirectional indicators between adversarial and knowledge transferability. We conduct extensive experiments for different scenarios on diverse datasets, showing a positive correlation between adversarial transferability and knowledge
+transferability. Our findings will shed light on future research about effective knowledge transfer learning and adversarial transferability analyses.
 
 ![GitHub Logo](/demos/fig1.png)
 
 ## Theory
 
-> **Intuitive low dimensional visualization of Adversarial Transferability:** 
-![GitHub Logo](/demos/fig2.png)
+We approach the problem by first setting up the relation between adversarial transferability and gradient matching distance. A key observation is that the adversarial attack reveals the singular vector corresponding to the largest singular value of the Jacobian of function f. Next, we explore the connection to knowledge transferability, which shows the gradient matching distance approximates the function matching distance with a distribution shift
+up to a Wasserstein distance. Finally, we complete the analysis by outlining the connection between
+the function matching distance and the knowledge transfer loss.
 
->![GitHub Logo](/demos/notation.png)
-
->![GitHub Logo](/demos/setting.png)
-
->![GitHub Logo](/demos/problem.png)
-
->![GitHub Logo](/demos/def1.png)
-
->![GitHub Logo](/demos/def2.png)
-
->![GitHub Logo](/demos/def3.png)
-
->![GitHub Logo](/demos/th1.png)
-
->![GitHub Logo](/demos/th2.png)
-
->![GitHub Logo](/demos/th3.png)
-
->![GitHub Logo](/demos/pgd.png)
+Check out our paper for the detailed derivation at https://arxiv.org/abs/2006.14512 
 
 ## Experiment
 
-### Adversarial Transferability Indicates Knowledge-transfer among Data Distributions
+### Adversarial Transferability Indicates Knowledge-transfer
+We control the adversarial transferability by varying the model architectures and measure the knowledge transferability from CIFAR10 to STL-10. The source models include various architecture such as MLP, LeNet, AlexNet and ResNet.
+>![GitHub Logo](/demos/fig2.png)
+
+### Knowledge Transferability Indicates Adversarial Transferability
 We manually construct five source datasets (5 source models) based on CIFAR-10 and
 a single target dataset (1 reference model) based on STL-10. We divide the classes of the original
 datasets into two categories, animals (bird, cat, deer, dog) and transportation vehicles (airplane,
@@ -39,20 +28,7 @@ automobile, ship, truck). Each of the source datasets consists of different a pe
 transportation vehicles, while the target dataset contains only transportation vehicles, which is meant
 to control the closeness of the two data distributions.
 >![GitHub Logo](/demos/fig3.png)
-### Adversarial Transferability Indicating Knowledge-transfer among Attributes
-In addition to the data distributions, we validate our theory on another dimension, attributes. This experiment suggests that the more adversarially transferable the source model of certain attributes is to the reference
-model, the better the model performs on the target task aiming to learn tar- get attributes.
-CelebA consists of 202,599 face images from 10,177 identities. A reference facial recognition model is trained on this identities. Each image also comes with 40 binary attributes, on which we train 40 source models. Our goal is to test
-whether source models of source attributes, can transfer to perform facial recognition. Below we show the top-5 attributes that have the highest adversarial transferability.
->![GitHub Logo](/demos/fig4.png)
-### Adversarial Transferability Indicating Knowledge-transfer among Tasks
-In this experiment, we aim to show that adversarial transferability can also indicate the knolwdge
-transferability among different machine learning tasks. Zamir et al. shows that models trained
-on different tasks can transfer to other tasks well, especially when the tasks belong to the same
-“category". Here we leverage the same dataset, and pick 15 single image tasks from the task pool,
-including Autoencoding, 2D Segmentation, 3D Keypoint and etc. Intuitively, these tasks can be
-categorized into 3 categories, semantic task, 2D tasks as well as 3D tasks. Leveraging the tasks within
-the same category, which would hypothetically have higher adversarial transferability, we evaluate
-the corresponding knowledge transferability.
->![GitHub Logo](/demos/fig5.png)
+
+ Check out our paper for more experiments on NLP at https://arxiv.org/abs/2006.14512
+
 
